@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>网页版用户数据收集系统</title>
+		<link rel="stylesheet" type="text/css" href="css/imgChange.css" />
+
+		<style type="text/css">
+			body figure {
+				display: inline-block;
+			}
+			
+			figure>figcaption {
+				text-align: center;
+			}
+		</style>
+
+	</head>
+
+	<body OnLoad="newbody()">
+
+
+		<div class="div1" id="div1">
+			<div class="images">
+	
+				<div class="image" id="imageload">
+	
+					<div class="picture11" id="protolist">
+						<img class="picture1" id="p1" />
+					</div>
+					<div id="cmlist" class="picture22">
+						<img class="picture2" id="p2" />
+					</div>
+	
+				</div>
+	
+			</div>
+	
+			<!--<div class="getcore">
+				<span>分数：</span>
+				<input type="text"  value="" />
+				<input type="button" value="提交"/>
+			</div>-->
+			<div class="originalcore">
+				<div class="originalgetcore">
+					<span class="picturecore">分数：</span>
+					<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore1"/>
+					<input type="button" value="提交" class="coresubmit" onclick="submitcore1()"/>
+			
+				</div>
+				<div class="retouchengetcore">
+					<span class="picturecore">分数：</span>
+					<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore2"/>
+					<input type="button" value="提交" class="coresubmit" onclick="submitcore2()"/>
+			
+				</div>
+			</div>
+			
+	
+			<div class="button">
+				<!--<span class="download" onclick="newScreen()">
+						重置
+						
+				</span>-->
+				<!--<span class="protodownload" id="download" onclick="protodownload()">
+						下载原图
+						
+				</span>
+				<span class="newdownload" id="download" onclick="newdownload()">
+						下载编辑图像
+						
+				</span>-->
+				<span class="qazwsx" onclick="downloadproto()"> 
+					下载
+				</span>
+				
+				<span class="next" onclick="changePic()">
+				    	下一张
+				  </span>
+	
+				<!--<span class="next" onclick="test()" >
+				    	test
+				  </span> -->
+			</div>
+			<div class="review"> 
+				<span class="download" onclick="newScreen()">
+						重置
+						
+				</span>
+				
+				
+				
+				
+			</div>
+			
+			<div id="changeArea" class="filter-controls">
+				<div class="filter">
+					<span class="filter-name">高斯模糊</span>
+					<input type="range" id="filter-blur" step="1" max="30" min="0" value="0" onmousemove="Change(this)" />
+					<span class="filter-val" id="f1">0</span>
+				</div>
+				<div class="filter">
+					<span class="filter-name">亮度</span>
+					<input type="range" id="filter-brightness" step="0.01" max="2" min="0" value="1" onmousemove="Change(this)" />
+					<span class="filter-val" id="f2">1</span>
+				</div>
+				<div class="filter">
+					<span class="filter-name">对比度</span>
+					<input type="range" id="filter-contrast" step="0.01" max="2" min="0" value="1" onmousemove="Change(this)" />
+					<span class="filter-val" id="f3">1</span>
+				</div>
+				<!--<div class="filter">
+					<span class="filter-name">灰度</span>
+					<input type="range" id="filter-grayscale" step="0.01" max="1" min="0" value="0" onmousemove="Change(this)" />
+					<span class="filter-val" id="f4">0</span>
+				</div>-->
+				<div class="filter">
+					<span class="filter-name">色调旋转</span>
+					<input type="range" id="filter-hue-rotate" step="1" max="360" min="0" value="0" onmousemove="Change(this)" />
+					<span class="filter-val" id="f5">0</span>
+				</div>
+				<!--<div class="filter">
+					<span class="filter-name">反色</span>
+					<input type="range" id="filter-invert" step="0.01" max="1" min="0" value="0" onmousemove="Change(this)" />
+					<span class="filter-val" id="f6">0</span>
+				</div>-->
+				<!--<div class="filter">
+					<span class="filter-name">透明度</span>
+					<input type="range" id="filter-opacity" step="0.01" max="1" min="0" value="1" onmousemove="Change(this)" />
+					<span class="filter-val" id="f7">1</span>
+				</div>-->
+	
+				<div class="filter">
+					<span class="filter-name">饱和度</span>
+					<input type="range" id="filter-saturate" step="0.01" max="1" min="0" value="1" onmousemove="Change(this)" />
+					<span class="filter-val" id="f8">1</span>
+				</div>
+				<!--<div class="filter">
+					<span class="filter-name">褐色度</span>
+					<input type="range" id="filter-sepia" step="0.01" max="1" min="0" value="0" onmousemove="Change(this)" />
+					<span class="filter-val" id="f9">0</span>
+				</div>-->
+				<!--<span>重置</span>-->
+	
+			</div>
+	
+		</div>
+		
+		
+
+		<div class="jump">
+			<!--<a href="newgetcore.html" class="asubmit" onclick="downloadparasite">结束图片修饰进入评分</a>-->
+			<!--<a  class="asubmit" onclick="show()" id="asubmit">结束图片修饰进入评分</a>-->
+			<a  class="asubmit" id="asubmit">结束图片修饰进入评分</a>
+		</div>
+		
+		
+		<div class="div" id="div"> 
+			<div class="newimages">
+				<div class="newtest">
+					<figure id="newcmlist" class="newcorepicture">
+						<img src='' class="newpicture1" id="newpicture1"/>
+					</figure>
+				</div>
+			</div>
+		
+		
+			<div class="getcore">
+				<span class="picturecore">分数：</span>
+				<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore"/>
+				<input type="button" value="提交" class="coresubmit" onclick="submitcore()"/>
+			
+			</div>
+		
+		
+		
+			<div class="newbutton">
+
+				<!--<span class="newnewdownload"  onclick="newnewdownload()">
+						保存
+					
+				</span>-->
+			
+				<span class="newnext" onclick="newchangePic()" >
+			    		下一张
+			 	</span>
+			
+
+			</div>
+			
+	
+		</div>
+		
+		
+		
+	</body>
+		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+		<script src="js/imgChange.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function show1(event) {
+				//取消冒泡
+				let oevent = event || window.event
+				if(document.all) {
+					oevent.cancelBubble = true
+				} else {
+					oevent.stopPropagation()
+				}
+				if(document.getElementById('div').style.display === 'none' || document.getElementById('div').style.display === '') {
+					document.getElementById('div').style.display = 'block'
+				} else {
+					document.getElementById('div').style.display = 'none'
+				}
+			}
+			function show2(event) {
+				//取消冒泡
+				let oevent = event || window.event
+				if(document.all) {
+					oevent.cancelBubble = true
+				} else {
+					oevent.stopPropagation()
+				}
+				if(document.getElementById('div1').style.display === 'none' || document.getElementById('div1').style.display === '') {
+					document.getElementById('div1').style.display = 'block'
+				} else {
+					document.getElementById('div1').style.display = 'none'
+				}
+			}
+			function show(){
+				
+				document.getElementById('div1').style.display = 'none';
+				document.getElementById('div').style.display = 'block';
+				
+				//根据id获取超链接,设置href属性
+    			var aObj = document.getElementById("asubmit");
+//  			aObj.href = "http://www.baidu.com";
+//  			//根据id获取超链接,设置文字内容
+    			aObj.innerText = "请完成所有图片的评分";
+    			
+    			newnewbody();
+
+
+				
+			}
+			
+			$("a").one("click",function(){
+//				downloadpicture();
+//				//	alert(bossnum);
+//				downloadnewpicture();
+//				imagenum=imagenum+2;
+				
+				document.getElementById('div1').style.display = 'none';
+				document.getElementById('div').style.display = 'block';
+				
+				//根据id获取超链接,设置href属性
+    			var aObj = document.getElementById("asubmit");
+//  			aObj.href = "http://www.baidu.com";
+//  			//根据id获取超链接,设置文字内容
+    			aObj.innerText = "请完成所有图片的评分";
+    			
+    			newnewbody();
+    			
+			});
+			
+			
+//			document.onclick = function() {
+//				document.getElementById('div').style.display = 'none'
+//			}
+//			document.getElementById('div').onclick = function(event) {
+//				let oevent = event || window.event
+//				oevent.stopPropagation()
+//			}
+//			document.getElementById('div1').onclick = function(event) {
+//				let oevent = event || window.event
+//				oevent.stopPropagation()
+//			}
+			
+			
+		</script>
+
+
+
+
+	<script src="js/imgChange.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/html2canvas.js"></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="js/html2canvas.min.js"></script>
+	<script type="text/javascript" src="js/canvas2image.js"></script>
+	
+
+</html>
