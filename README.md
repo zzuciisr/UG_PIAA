@@ -3,7 +3,7 @@
 Personalized image aesthetic assessment needs numbers of personalized data
 in line with user's aesthetic preference. Therefore, we build one
 image collection platform to collect those personalized images:<br>
-https://zzu-fjq.github.io/Image-Aesthetic-Quality-Assessment-Based-on-Personalized-Image-Enhancement/ 
+https://zzu-fjq.github.io/Image-Aesthetic-Assessment-Based-on-Personalized-Image-Enhancement/ 
 
 ## How to use our platform
 Our collection platform requires users to complete the following operations: 
