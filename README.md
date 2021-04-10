@@ -1,7 +1,7 @@
-# Image-Aesthetic-Quality-Assessment-Based-on-Personalized-Image-Enhancement
+# Image-Aesthetic-Assessment-Based-on-Personalized-Image-Enhancement
 ## Personalized image collection platform
-Personalized image aesthetic quality assessment needs numbers of personalized data
-in line with userâ€™s aesthetic preference. Therefore, we build one
+Personalized image aesthetic assessment needs numbers of personalized data
+in line with user's aesthetic preference. Therefore, we build one
 image collection platform to collect those personalized images:<br>
 https://zzu-fjq.github.io/Image-Aesthetic-Quality-Assessment-Based-on-Personalized-Image-Enhancement/ 
 
