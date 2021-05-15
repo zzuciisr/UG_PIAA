@@ -1,4 +1,4 @@
-# Image-Aesthetic-Assessment-Based-on-Personalized-Image-Enhancement
+# User-Guided Personalized Image Aesthetic Assessment based on Deep Reinforcement Learning
 ## Personalized image collection platform
 Personalized image aesthetic assessment needs numbers of personalized data
 in line with user's aesthetic preference. Therefore, we build one
