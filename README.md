@@ -3,7 +3,7 @@
 Personalized image aesthetic assessment needs numbers of personalized data
 in line with user's aesthetic preference. Therefore, we build one
 image collection platform to collect those personalized images:<br>
-https://zzuciisr.github.io/Image-Aesthetic-Assessment-Based-on-Personalized-Image-Enhancement/ 
+https://zzuciisr.github.io/User-Guided-Personalized-Image-Aesthetic-Assessment-based-on-Deep-Reinforcement-Learning/
 
 ## How to use our platform
 Our collection platform requires users to complete the following operations: 
