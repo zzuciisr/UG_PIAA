@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8" />
-		<title>简化版用户数据收集系统</title>
+		<title>Simplified version of user image collection platform</title>
 		<link rel="stylesheet" type="text/css" href="css/imgChange.css" />
 
 		<style type="text/css">
@@ -44,15 +44,15 @@
 			</div>-->
 			<div class="originalcore">
 				<div class="originalgetcore">
-					<span class="picturecore">分数：</span>
+					<span class="picturecore">Score：</span>
 					<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore1"/>
-					<input type="button" value="提交" class="coresubmit" onclick="submitcore1()"/>
+					<input type="button" value="Submit" class="coresubmit" onclick="submitcore1()"/>
 			
 				</div>
 				<div class="retouchengetcore">
-					<span class="picturecore">分数：</span>
+					<span class="picturecore">Score：</span>
 					<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore2"/>
-					<input type="button" value="提交" class="coresubmit" onclick="submitcore2()"/>
+					<input type="button" value="Submit" class="coresubmit" onclick="submitcore2()"/>
 			
 				</div>
 			</div>
@@ -72,11 +72,11 @@
 						
 				</span>-->
 				<span class="qazwsx" onclick="downloadproto()"> 
-					下载
+					Download
 				</span>
 				
 				<span class="next" onclick="changePic()">
-				    	下一张
+				    	Next
 				  </span>
 	
 				<!--<span class="next" onclick="test()" >
@@ -85,7 +85,7 @@
 			</div>
 			<div class="review"> 
 				<span class="download" onclick="newScreen()">
-						重置
+						Reset
 						
 				</span>
 				
@@ -96,48 +96,48 @@
 			
 			<div id="changeArea" class="filter-controls">
 				<div class="filter">
-					<span class="filter-name">高斯模糊</span>
+					<span class="filter-name">Gaussian Blur</span>
 					<input type="range" id="filter-blur" step="1" max="30" min="0" value="0" onmousemove="Change(this)" />
 					<span class="filter-val" id="f1">0</span>
 				</div>
 				<div class="filter">
-					<span class="filter-name">亮度</span>
+					<span class="filter-name">Brightness</span>
 					<input type="range" id="filter-brightness" step="0.01" max="2" min="0" value="1" onmousemove="Change(this)" />
 					<span class="filter-val" id="f2">1</span>
 				</div>
 				<div class="filter">
-					<span class="filter-name">对比度</span>
+					<span class="filter-name">Contrast</span>
 					<input type="range" id="filter-contrast" step="0.01" max="2" min="0" value="1" onmousemove="Change(this)" />
 					<span class="filter-val" id="f3">1</span>
 				</div>
 				<!--<div class="filter">
-					<span class="filter-name">灰度</span>
+					<span class="filter-name">Grayscale</span>
 					<input type="range" id="filter-grayscale" step="0.01" max="1" min="0" value="0" onmousemove="Change(this)" />
 					<span class="filter-val" id="f4">0</span>
 				</div>-->
 				<div class="filter">
-					<span class="filter-name">色调旋转</span>
+					<span class="filter-name">Hue Rotate</span>
 					<input type="range" id="filter-hue-rotate" step="1" max="360" min="0" value="0" onmousemove="Change(this)" />
 					<span class="filter-val" id="f5">0</span>
 				</div>
 				<!--<div class="filter">
-					<span class="filter-name">反色</span>
+					<span class="filter-name">Invert</span>
 					<input type="range" id="filter-invert" step="0.01" max="1" min="0" value="0" onmousemove="Change(this)" />
 					<span class="filter-val" id="f6">0</span>
 				</div>-->
 				<!--<div class="filter">
-					<span class="filter-name">透明度</span>
+					<span class="filter-name">Opacity</span>
 					<input type="range" id="filter-opacity" step="0.01" max="1" min="0" value="1" onmousemove="Change(this)" />
 					<span class="filter-val" id="f7">1</span>
 				</div>-->
 	
 				<div class="filter">
-					<span class="filter-name">饱和度</span>
+					<span class="filter-name">Saturate</span>
 					<input type="range" id="filter-saturate" step="0.01" max="1" min="0" value="1" onmousemove="Change(this)" />
 					<span class="filter-val" id="f8">1</span>
 				</div>
 				<!--<div class="filter">
-					<span class="filter-name">褐色度</span>
+					<span class="filter-name">Sepia</span>
 					<input type="range" id="filter-sepia" step="0.01" max="1" min="0" value="0" onmousemove="Change(this)" />
 					<span class="filter-val" id="f9">0</span>
 				</div>-->
@@ -152,7 +152,7 @@
 		<div class="jump">
 			<!--<a href="newgetcore.html" class="asubmit" onclick="downloadparasite">结束图片修饰进入评分</a>-->
 			<!--<a  class="asubmit" onclick="show()" id="asubmit">结束图片修饰进入评分</a>-->
-			<a  class="asubmit" id="asubmit">结束图片修饰进入评分</a>
+			<a  class="asubmit" id="asubmit">End image retouching to enter scoring</a>
 		</div>
 		
 		
@@ -183,7 +183,7 @@
 				</span>-->
 			
 				<span class="newnext" onclick="newchangePic()" >
-			    		下一张
+			    		Next
 			 	</span>
 			
 
@@ -235,7 +235,7 @@
     			var aObj = document.getElementById("asubmit");
 //  			aObj.href = "http://www.baidu.com";
 //  			//根据id获取超链接,设置文字内容
-    			aObj.innerText = "请完成所有图片的评分";
+    			aObj.innerText = "Please complete the rating for all images";
     			
     			newnewbody();
 
@@ -256,7 +256,7 @@
     			var aObj = document.getElementById("asubmit");
 //  			aObj.href = "http://www.baidu.com";
 //  			//根据id获取超链接,设置文字内容
-    			aObj.innerText = "请完成所有图片的评分";
+    			aObj.innerText = "Please complete the rating for all images";
     			
     			newnewbody();
     			
