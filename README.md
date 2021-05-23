@@ -2,8 +2,7 @@
 ## Personalized image collection platform
 Personalized image aesthetic assessment needs numbers of personalized data
 in line with user's aesthetic preference. Therefore, we build one
-image collection platform to collect those personalized images:<br>
-https://zzuciisr.github.io/UG_PIAA/
+image collection platform to collect those personalized images:<br> https://zzuciisr.github.io/UG_PIAA/
 
 ## How to use our platform
 Our collection platform requires users to complete the following operations: 
