@@ -1,80 +1,55 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="utf-8" />
 		<title>Simplified version of user image collection platform</title>
 		<link rel="stylesheet" type="text/css" href="css/imgChange.css" />
-
 		<style type="text/css">
 			body figure {
 				display: inline-block;
-			}
-			
+			}			
 			figure>figcaption {
 				text-align: center;
 			}
 		</style>
-
 	</head>
-
 	<body OnLoad="newbody()">
-
-
 		<div class="div1" id="div1">
-			<div class="images">
-	
-				<div class="image" id="imageload">
-	
+			<div class="images">	
+				<div class="image" id="imageload">	
 					<div class="picture11" id="protolist">
 						<img class="picture1" id="p1" />
 					</div>
 					<div id="cmlist" class="picture22">
 						<img class="picture2" id="p2" />
-					</div>
-	
-				</div>
-	
+					</div>	
+				</div>	
 			</div>
-
 			<div class="originalcore">
 				<div class="originalgetcore">
 					<span class="picturecore">Score：</span>
 					<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore1"/>
-					<input type="button" value="Submit" class="coresubmit" onclick="submitcore1()"/>
-			
+					<input type="button" value="Submit" class="coresubmit" onclick="submitcore1()"/>			
 				</div>
 				<div class="retouchengetcore">
 					<span class="picturecore">Score：</span>
 					<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore2"/>
-					<input type="button" value="Submit" class="coresubmit" onclick="submitcore2()"/>
-			
+					<input type="button" value="Submit" class="coresubmit" onclick="submitcore2()"/>			
 				</div>
-			</div>
-			
-	
+			</div>	
 			<div class="button">
-				
 				<span class="qazwsx" onclick="downloadproto()"> 
 					Download
-				</span>
-				
+				</span>	
 				<span class="next" onclick="changePic()">
 				    	Next
 				  </span>
-	
 			</div>
 			<div class="review"> 
 				<span class="download" onclick="newScreen()">
-						Reset
-						
-				</span>
-				
-				
-				
-				
-			</div>
-			
+						Reset				
+				</span>		
+			</div>	
 			<div id="changeArea" class="filter-controls">
 				<div class="filter">
 					<span class="filter-name">Gaussian Blur</span>
@@ -126,14 +101,9 @@
 			</div>
 	
 		</div>
-		
-		
-
 		<div class="jump">
 			<a  class="asubmit" id="asubmit">End image retouching to enter scoring</a>
 		</div>
-		
-		
 		<div class="div" id="div"> 
 			<div class="newimages">
 				<div class="newtest">
@@ -142,42 +112,25 @@
 					</figure>
 				</div>
 			</div>
-		
-		
 			<div class="getcore">
 				<span class="picturecore">Score：</span>
 				<input type="number" min="0" max="100" value="" class="inputcore" id="inputcore"/>
 				<input type="button" value="Submit" class="coresubmit" onclick="submitcore()"/>
-			
 			</div>
-		
-		
-		
 			<div class="newbutton">
-
 				<!--<span class="newnewdownload"  onclick="newnewdownload()">
-						SAVE
-					
+						SAVE	
 				</span>-->
-			
 				<span class="newnext" onclick="newchangePic()" >
 			    		Next
 			 	</span>
-			
-
 			</div>
-			
-	
 		</div>
-		
-		
-		
 	</body>
 		<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 		<script src="js/imgChange.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			function show1(event) {
-				//取消冒泡
 				let oevent = event || window.event
 				if(document.all) {
 					oevent.cancelBubble = true
@@ -191,7 +144,6 @@
 				}
 			}
 			function show2(event) {
-				//取消冒泡
 				let oevent = event || window.event
 				if(document.all) {
 					oevent.cancelBubble = true
@@ -205,65 +157,23 @@
 				}
 			}
 			function show(){
-				
 				document.getElementById('div1').style.display = 'none';
 				document.getElementById('div').style.display = 'block';
-				
-				//根据id获取超链接,设置href属性
     			var aObj = document.getElementById("asubmit");
-//  			aObj.href = "http://www.baidu.com";
-//  			//根据id获取超链接,设置文字内容
     			aObj.innerText = "Please complete the rating for all images";
-    			
     			newnewbody();
-
-
-				
 			}
-			
 			$("a").one("click",function(){
-//				downloadpicture();
-//				//	alert(bossnum);
-//				downloadnewpicture();
-//				imagenum=imagenum+2;
-				
 				document.getElementById('div1').style.display = 'none';
 				document.getElementById('div').style.display = 'block';
-				
-				//根据id获取超链接,设置href属性
     			var aObj = document.getElementById("asubmit");
-//  			aObj.href = "http://www.baidu.com";
-//  			//根据id获取超链接,设置文字内容
-    			aObj.innerText = "Please complete the rating for all images";
-    			
-    			newnewbody();
-    			
-			});
-			
-			
-//			document.onclick = function() {
-//				document.getElementById('div').style.display = 'none'
-//			}
-//			document.getElementById('div').onclick = function(event) {
-//				let oevent = event || window.event
-//				oevent.stopPropagation()
-//			}
-//			document.getElementById('div1').onclick = function(event) {
-//				let oevent = event || window.event
-//				oevent.stopPropagation()
-//			}
-			
-			
+    			aObj.innerText = "Please complete the rating for all images";  			
+    			newnewbody(); 			
+			});			
 		</script>
-
-
-
-
 	<script src="js/imgChange.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="js/html2canvas.js"></script>
 	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
 	<script type="text/javascript" src="js/html2canvas.min.js"></script>
 	<script type="text/javascript" src="js/canvas2image.js"></script>
-	
-
 </html>
